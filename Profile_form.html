@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rushikesh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+</head>
+<body>
+    <form action="destistion_server_url">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div>
+                <label for="fn">Full name</label>
+                <input id="fn" name="Full name" placeholder="Enter Full Name" required >
+            </div>
+            <div>
+                <label for="a1">Enter Age</label>
+                <input id="a1" type="number" placeholder="age" required min="18" max="60" step="2">
+            </div>
+            <div>
+                <label>Select Gender</label>
+                <input id="g1" type="radio" name="gender" value="male" checked >
+                <label for="g1">Male</label>
+                <input id="g2" type="radio" name="gender" value="female">
+                <label for="g2">Female</label>
+            </div>
+            <div>
+                <label for="bdt">Select Your BirthDate</label>
+                <input id="bdt" type="date" name="birthdate">
+            </div>
+            <div>
+                <label>select Hobbies</label>
+                <input id="hb1" type="checkbox" name="Hobbies" value="Dancing">
+                <label for="hb1">Dance</label>
+                <input id="hb2" type="checkbox" name="Hobbies" value="Travelling">
+                <label for="hb2">travel</label>
+                <input id="hb3" type="checkbox" name="Hobbies" value="Sports">
+                <label for="hb3">sports</label>
+            </div>
+            <div>
+                <label for="cf">Favourite Coffee</label>
+                <input id="cf" list="coffees">
+                <datalist id="coffees">
+                    <option value="CAPPICCINO">
+                    <option value="EXPRESSO">
+                    <option value="BRU">
+                    <option value="CAFE MOCHA">
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Education Details</legend>
+            <div>
+                <label for="qu">Qualification</label>
+                <select id="qu" name="qualification">
+                    <option value="BE">B.E.</option>
+                    <option value="ME">M.E.</option>
+                    <option value="BSC">B.S.C.</option>
+                    <option>M.Sc</option>
+                    <option>M.B.A</option>
+                    <option>M.C.A</option>
+                </select>
+            </div>
+            <div>
+                <label for="sk">Skills Set</label><br>
+                <select id="sk" name="skills" size="6" multiple>
+                    <optgroup label="Web Development">
+                        <option>CSS</option>
+                        <option>HTML 5</option>
+                    </optgroup>
+                   
+                    <optgroup label="FrontEnd">
+                        <option>Angular</option>
+                        <option>Node JS</option>
+                        <option>Express JS</option>
+                        <option>Core Java</option>
+                        <option>Java Web</option>
+                    </optgroup>
+                    <optgroup label="Courses">
+                        <option>Hibernate JPA</option>
+                        <option>Spring</option>
+                        <option>JavaScripts</option>
+                        <option>Reacts</option> 
+                    </optgroup>
+                     
+                    <optgroup label="Backend-python">
+                        <option>Python</option>
+                        <option>Django</option>
+                    </optgroup>
+                    
+                </select>
+            </div>    
+        </fieldset>
+        <fieldset>
+            <label>Address</label>
+            <div>
+                <label for="addr">Address</label>
+                <textarea id="addr" name="homeAddress">This is Textarea</textarea>
+            </div>
+            <div>
+                <label for="Ofadr">OfficeAddress</label>
+                <textarea id="Ofadr" name="OfficeAddress" placeholder="Work Address" 
+                rows="4" cols="50"></textarea>
+            </div>
+        </fieldset>
+        
+        <div>
+            <label for="bdt">Select Your between 1-jan-1999 to 31-dec-2023:</label>
+            <input id="bdt" type="date" name="birthdate" min="1999-01-01" max="2023-12-31" >
+        </div>
+        <div>
+            <label for="fat">Flight Arrival Time</label>
+            <input id="fat" type="time" name="flightarrivaltime">
+        </div>
+        <div>
+            <label for="fddt">Flight Departure Date and Time</label>
+            <input id="fddt" type="datetime-local" name="flightdepartureDateTime"> 
+        </div>
+        <div>
+            <label for="wk">Select Week and Year</label>
+            <input id="wk" type="week" name="weekofYear">
+        </div>
+        <div>
+            <label for="cce">Credit Card Expiry</label>
+            <input id="cce" type="month" name="creditCardExpiry">
+        </div>
+        <div>
+            <label for="eml">Enter Email Address</label>
+            <input id="eml" type="email" name="emailId" placeholder="abcxyz@something.com">
+        </div>
+        <div>
+            <label for="mb1">Mobile No</label>
+            <input type="tel" pattern="[0-9]+" name="countryCode" placeholder="countryCode" required size="5">
+            <input id="mb1" type="tel" pattern="[0-9]{10}" name="MobileNo" placeholder="MobileNo" maxlength="10" required>
+        </div>
+        <div>
+            <label for="sv">Sound Volume:0</label>
+            <input id="sv" type="range" name="soundvol">
+            <label form="sv">100</label>
+        </div>
+        <div>
+            <label for="spv">Speaker Volume:20</label>
+            <input id="spv" type="range" name="speakervol" min="20" max="70" step="5">
+            <label form="sv">70</label>
+        </div>
+        <div>
+            <label for="clr">Select Your Favourite Color</label> 
+            <input id="clr" type="color" name="favouriteColor" value="#ff00ff">
+        </div>
+        <div>
+            <label for="rsm">Upload Your Resume</label>
+            <input id="rsm" type="file" name="resume">
+        </div>
+        <div>
+            <label for="pr">Enter profile URL</label>
+            <input id="pr" type="url" name="profileUrl">
+        </div>
+        <div>
+            <label for="srch">Search</label>
+            <input id="srch" type="search" name="searchContent">
+        </div>
+        
+        
+        <!-- <div>
+            <input type="submit">
+            <input type="reset">
+        </div> -->
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    <form>
+        <div>
+            <button>Go</button>
+            <button>Next</button>
+            <button>Previous</button>
+        </div>
+        <div>
+            <h2>Calculator</h2>
+            <input> <br>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button> <br>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button> <br>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button> <br>
+
+        </div>
+        <button> <img src="../images/pexels-photo-4629633.webp" width="100" height="100" </button>
+    </form>
+    </form>
+</body>
+</html> 
